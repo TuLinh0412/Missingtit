@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "mongoose": "^6.5.2"
+  },
+  "name": "langnghe",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.14.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

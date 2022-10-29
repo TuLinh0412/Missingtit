@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./new-style.ejs'); %>
+        <title>New product</title>
+</head>
+
+<body>
+    <h1>Thêm làng</h1>
+    <form action="/" method="POST">
+        <label for="name">Tên làng</label>
+        <input type="text" name="name" id="name" placeholder="Tên làng" required />
+        <label for="address">địa chỉ</label>
+        <input type="text" name="address" id="address" placeholder="Địa chỉ" required />
+        <label for="introduction">giới thiệu chung</label>
+        <textarea type="text" name="introduction" id="introduction" placeholder="giới thiệu chung"></textarea>
+        <label for="introduction">lịch sử</label>
+        <textarea type="text" name="history" id="history" placeholder="Lịch sử"></textarea>
+        <label for="introduction">sản phẩm</label>
+        <textarea type="text" name="product" id="product" placeholder="Sản Phẩm"></textarea>
+        <label for="link1">ảnh 1</label>
+        <input type="text" name="link1" id="link1" placeholder="image 1">
+        <label for="link2">ảnh 2</label>
+        <input type="text" name="link2" id="link2" placeholder="image 2">
+        <label for="link3">ảnh 3</label>
+        <input type="text" name="link3" id="link3" placeholder="image 3">
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

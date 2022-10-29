@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /><%- include('./header-style.ejs'); %>
+    <%- include('./home-style.ejs'); %> <%- include('./footer-style.ejs'); %>
+    <%- include('./slider-style.ejs'); %>
+  </head>
+
+  <body style="position: relative">
+    <header>
+      <%-include('./header.ejs') %>
+      <div class="header-content">
+        <h1 class="pb-20">The Beauty of Vietnamese Villages</h1>
+        <p class="pb-20">
+          Vietnam is one of the most popular and favorite destinations in South
+          East Asia. It is not only because of the beautiful landscape but also
+          the longstanding traditional craft villages. These villages have been
+          well preserved from generations to generations and existed for
+          centuries. Their products have been well known in both domestic and
+          international markets.Vietnamese customs, traditions, and cultures,
+          all can be seen through these products
+        </p>
+        <!-- <button>
+            See More
+            <i class="fa-solid fa-circle-arrow-right"></i> -->
+        <!-- </button> -->
+      </div>
+    
+      <i
+        class="fa-solid fa-chevron-down"
+        id="header-mien-bac"
+        style="
+          display: flex;
+          justify-content: center;
+          transform: translateY(10vh);
+        "
+      ></i>
+    
+    </header>
+    <main>
+      <div class="mien-bac">
+        
+        <i
+          class="fa-solid fa-chevron-up"
+          id="mien-bac-header"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(1vh);
+          "
+        ></i>
+      
+        <div class="icon">
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="bac-giang"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="bac-ninh"
+            alt=""
+          />
+          <!-- <img src="../assets/map-pin.png" class="location" data-popup="#popup" id="dot-3" alt=""> -->
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="ha-noi"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="hai-duong"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="ninh-binh"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="hai-phong"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="hung-yen"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="ha-nam"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="thai-binh"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="thanh-hoa"
+            alt=""
+          />
+          <img
+            src="../assets/map-pin.png"
+            class="location"
+            data-popup="#popup"
+            id="nghe-an"
+            alt=""
+          />
+        </div>
+        <div class="slider-wrapper r-8vw"><%- include('./slider.ejs')%></div>
+      
+        <i
+          class="fa-solid fa-chevron-down"
+          id="mien-bac-mien-trung"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(92vh);
+          "
+        ></i>
+      
+      </div>
+      <div class="mien-trung">
+        
+        <i
+          class="fa-solid fa-chevron-up"
+          id="mien-trung-mien-bac"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(1vh);
+          "
+        ></i>
+      
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="da-nang"
+          alt=""
+        />
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="hue"
+          alt=""
+        />
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="quang-nam"
+          alt=""
+        />
+        <div class="slider-wrapper l-8vw"><%- include('./slider.ejs')%></div>
+        
+        <i
+          class="fa-solid fa-chevron-down"
+          id="mien-trung-mien-nam"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(92vh);
+          "
+        ></i>
+      
+      </div>
+      <div class="mien-nam">
+        
+        <i
+          class="fa-solid fa-chevron-up"
+          id="mien-nam-mien-trung"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(1vh);
+          "
+        ></i>
+      
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="ninh-thuan"
+          alt=""
+        />
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="ho-chi-minh"
+          alt=""
+        />
+        <img
+          src="../assets/map-pin.png"
+          class="location"
+          data-popup="#popup"
+          id="an-giang"
+          alt=""
+        />
+        <div class="slider-wrapper l-8vw"><%- include('./slider.ejs')%></div>
+        
+        <i
+          class="fa-solid fa-chevron-down"
+          id="mien-nam-footer"
+          style="
+            display: flex;
+            justify-content: center;
+            transform: translateY(92vh);
+          "
+        ></i>
+      
+      </div>
+      <div id="popup">
+        <div style="position: relative">
+          <i id="left-popup" class="fa-solid fa-chevron-left popup-btn"></i>
+          <div class="popup_content"></div>
+          <i id="right-popup" class="fa-solid fa-chevron-right popup-btn"></i>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./footer.ejs'); %>
+
+    <!-- <script>
+      const header = document.querySelector("header")
+      const mienBac = document.querySelector(".mien-bac")
+      const mienTrung = document.querySelector(".mien-trung")
+      const mienNam = document.querySelector(".mien-nam")
+      const footer = document.querySelector("footer")
+      const headerMienBac = document.querySelector("#header-mien-bac")
+      const mienBacHeader = document.querySelector("#mien-bac-header")
+      const mienBacTrung = document.querySelector("#mien-bac-mien-trung")
+      const mienTrungBac = document.querySelector("#mien-trung-mien-bac")
+      const mienNamTrung = document.querySelector("#mien-nam-mien-trung")
+      const mienTrungNam = document.querySelector("#mien-trung-mien-nam")
+      const mienNamFooter= document.querySelector("#mien-nam-footer")
+      const footerMienNam=document.q
+      // const mienBacNam = document.querySelector("#mien-bac-nam")
+
+      // header.style.document="none"
+      mienBac.style.display ="none"
+      mienTrung.style.display="none"
+      mienNam.style.display="none"
+      footer.style.display="none"
+      // footer.style.display="none"
+
+     headerMienBac.addEventListener("click", () => {
+        mienBac.style.display="block"
+        header.style.display="none"
+      })
+      
+      mienBacHeader.addEventListener("click", () => {
+        mienBac.style.display="none"
+        header.style.display="block"
+      })
+
+      mienBacTrung.addEventListener("click", () => {
+        mienBac.style.display="none"
+        mienTrung.style.display="block"
+        header.style.display="none"
+      })
+
+      mienTrungBac.addEventListener("click", () => {
+        mienBac.style.display="block"
+        mienTrung.style.display="none"
+        header.style.display="none"
+      })
+
+      mienTrungNam.addEventListener("click", () => {
+        mienNam.style.display="block"
+        mienTrung.style.display="none"
+        header.style.display="none"
+      })
+
+      mienNamTrung.addEventListener("click", () => {
+        mienNam.style.display="none"
+        mienTrung.style.display="block"
+        header.style.display="none"
+      })
+
+      mienNamFooter.addEventListener("click", () => {
+        mienNam.style.display="none"
+        footer.style.display="block"
+        header.style.display="none"
+      })
+
+      
+
+    </script> -->
+
+    <!-- slider js -->
+    <script type="application/xml" id="_id">
+      <%= langNghes[0]._id %>,<%= langNghes[1]._id %>,<%= langNghes[2]._id %>,<%= langNghes[3]._id %>,<%= langNghes[4]._id %>
+    </script>
+
+    <script type="text/javascript">
+
+      let link_langs=[];
+      let slider_img=[];
+      <% for (let i =0; i< 41; i ++) {%>
+        link_langs.push('<%= langNghes[i]._id %>')
+        slider_img.push('<%= langNghes[i].link1 %>')
+       <%}%>
+      // const slider_img = [
+      //   "../assets/img/LangMaiDong1.jpg",
+      //   "../assets/img/LangChangSon1.jpg",
+      //   "../assets/img/LangPhucLoc1.jpg",
+      //   "../assets/img/LangPhuKhe1.jpg",
+      //   "../assets/img/LangTanChau1.jpg",
+      //   "../assets/img/LangVongNguyet1.jpg",
+      //   "../assets/img/LangMaiDong1.jpg",
+      // ];
+      const limit = 41;
+      let current = 1;
+
+      function generate1(pos) {
+        let count = pos;
+        let i = 1;
+        let res = [];
+        while (i <= 5) {
+          res.push(count);
+          count++;
+          i++;
+          if (count > limit) count = 1;
+        }
+
+        return res;
+      }
+
+      function render1(indexes, key) {
+        const slider_contents = document.querySelectorAll(".slider_content");
+        slider_contents[key].innerHTML = "";
+        indexes.forEach((index) => {
+          slider_contents[key].insertAdjacentHTML(
+            "beforeend",
+            `<a href='show/${link_langs[index - 1]}'><img src='${
+              slider_img[index - 1]
+            }'></a>`
+          );
+        });
+      }
+
+      document
+        .querySelectorAll(".fa-solid.fa-chevron-down")
+        .forEach((el, index) =>
+          el.addEventListener("click", () => {
+            if (current > 1) {
+              current = current - 1;
+            } else current = limit;
+            render1(generate1(current), index);
+          })
+        );
+
+      document.querySelectorAll(".fa-solid.fa-angle-up").forEach((el, index) =>
+        el.addEventListener("click", () => {
+          if (current == limit) {
+            current = 1;
+          } else current = current + 1;
+          render1(generate1(current), index);
+        })
+      );
+      render1([1, 2, 3, 4, 5], 0);
+      render1([10,11,12,13,14], 1);
+      render1([31,32,33,34,35], 2);
+    </script>
+
+    <!-- popup script -->
+    <script>
+       let name_langs= [];
+       let address_langs=[];
+      <% for (let i =0; i< 41; i ++) {%>
+       name_langs.push('<%= langNghes[i].name %>')
+       address_langs.push('<%= langNghes[i].address %>')
+       <%}%>
+
+       console.log(address_langs);
+
+       const el = (sel, par) => (par || document).querySelector(sel);
+       // const locations = document.querySelectorAll(".location");
+       // const popup = document.getElementById("popup")
+
+       let popup;
+       let currentPopup = 1;
+       let limitPopup = 5;
+       const handlePopup = (evt) => {
+         // Get clicked target
+         const elTarget = evt.target;
+         // Clicked a popup, do nothing (Comment this line if not needed)
+         if (elTarget.closest("#popup")) return;
+         // Close currently open popup (if any):
+         if (popup) popup.classList.remove("is-active");
+         // Get initiator button
+         const elBtn = elTarget.closest("[data-popup]");
+         // Not a valid button
+         if (!elBtn) return;
+         address_langs.forEach((el) => {
+           if (elBtn.id == el) {
+             address_langs_popup.push(el);
+           }
+         });
+         // Get the popup
+         popup = el(elBtn.dataset.popup);
+         // No matching popup in this page, do nothing
+         if (!popup) return;
+         // Get its parent (BODY) so that we can calculate the min max
+         // available space
+         const elParent = popup.parentElement;
+         // Position:
+         const absX = evt.clientX + window.scrollX;
+         const absY = evt.clientY  + window.scrollY;
+
+         const bcrParent = elParent.getBoundingClientRect();
+         const bcrPopup = popup.getBoundingClientRect();
+
+         const maxX = bcrParent.width - bcrPopup.width;
+         const maxY = bcrParent.height - bcrPopup.height;
+         let x = Math.max(0, Math.min(absX, maxX));
+         let y = Math.max(0, Math.min(absY, maxY));
+         if(y > 1500) y = absY
+         // Show popup
+         Object.assign(popup.style, {
+           left: `${x}px`,
+           top: `${y}px`,
+         });
+         popup.classList.add("is-active");
+       };
+
+       el("body").addEventListener("click", handlePopup);
+       let address_langs_popup =[], name_langs_popup=[], link_langs_popup=[];
+
+       function render2(index) {
+         const slider_content = document.querySelector(".popup_content");
+         slider_content.innerHTML = "";
+         slider_content.insertAdjacentHTML(
+           "beforeend",
+           `<a href='show/${link_langs[index - 1]}'><img src="${
+             slider_img[index - 1]
+           }" alt="" /><div style="font-size: 16px">${
+             name_langs[index - 1]
+           }</div><div style="font-size: 12px">\
+                 Địa chỉ: ${address_langs[index - 1]}
+               </div>
+             </a>`
+         );
+       }
+       document.getElementById("left-popup").addEventListener("click", () => {
+         if (currentPopup > 1) currentPopup--;
+         else currentPopup = limitPopup;
+         render2(currentPopup);
+       });
+       document.getElementById("right-popup").addEventListener("click", () => {
+         if (currentPopup == limitPopup) currentPopup = 1;
+         else currentPopup++;
+         render2(currentPopup);
+       });
+       render2(currentPopup);
+    </script>
+
+    <!-- random link-->
+    <script>
+      let random = Math.floor(Math.random() * 3 + 1);
+    </script>
+  </body>
+</html>

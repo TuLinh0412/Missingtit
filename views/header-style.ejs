@@ -1,0 +1,240 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  header {
+    --search-bar-height: 10vh;
+    background-image: url("../assets/img/LangChangSon1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+    width: 100%;
+  }
+
+  /* ở đây nữa */
+  input {
+    border-style: none;
+    border: 0px none white;
+  }
+  input:focus-visible {
+    outline: none;
+  }
+  button {
+    cursor: pointer;
+    border-style: none;
+    background-color: white;
+    opacity: 0.6;
+  }
+  button:hover {
+    opacity: 1;
+  }
+  textarea {
+    resize: none;
+  }
+
+  .pb-20 {
+    padding-bottom: 20px !important;
+  }
+  .p-80 {
+    padding: 80px !important;
+  }
+  .d-flex {
+    display: flex !important;
+  }
+  .m-w-70 {
+    max-width: 70% !important;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+  .col-2 {
+    width: 50%;
+    padding: 10px;
+  }
+  .col-1 {
+    width: 100%;
+    padding: 10px;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    padding: 12px;
+    border-color: #ccc;
+    border-width: 0 0 4px 0;
+    border-style: none none solid none;
+    box-shadow: none;
+    outline: none;
+    transition: all 0.5s ease;
+  }
+  .form-control:focus {
+    box-shadow: none;
+    border-color: #5e9bfc;
+  }
+  .upper-header {
+    height: var(--search-bar-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .upper-header .logo-img {
+    width: calc(3 * var(--search-bar-height));
+    height: var(--search-bar-height);
+    background-image: url("../assets/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 20px;
+    left: 80px;
+  }
+  .upper-header .search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+    height: calc(var(--search-bar-height) / 2);
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    right: 80px;
+    /* background-color: white; */
+    /* color: black; */
+  }
+  /* copy from mockplus */
+  .search {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: crimson;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+    /* box-shadow: 0 0 25px 0 crimson; */
+  }
+  .search:hover {
+    cursor: pointer;
+  }
+  .search::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 22px;
+    right: 0;
+    bottom: 0;
+    left: 22px;
+    width: 12px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+  }
+  .search::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+  }
+  header input {
+    font-family: "Inconsolata", monospace;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: none;
+    /*  border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+    background: crimson;
+    color: white;
+    text-shadow: 0 0 10px crimson;
+    padding: 0 80px 0 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 25px 0 crimson, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: inset 0 0 25px 0 rgba(0, 0, 0, 0.5); */
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+  }
+  header input:hover {
+    cursor: pointer;
+  }
+  header input:focus {
+    width: 20vw;
+    opacity: 1;
+    cursor: text;
+  }
+  /* sửa ở đây */
+
+  header input:focus ~ .search {
+    right: -250px;
+    background: #151515;
+    z-index: 6;
+  }
+  header input:focus ~ .search::before {
+    top: 0;
+    left: 0;
+    width: 25px;
+  }
+  header input:focus ~ .search::after {
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+  }
+  header input::placeholder {
+    color: white;
+    opacity: 1;
+    font-weight: bolder;
+  }
+
+  .ten-lang {
+    position: absolute;
+    transform: translate(75vh, 10vh);
+    font-family: "Inter";
+    font-style: normal;
+    text-align: center;
+    color: #f7941d;
+  }
+  #search-popup ul{
+    background-color: #ccc;
+  }
+  #search-popup li {
+    display: none;
+  }
+</style>

@@ -1,0 +1,53 @@
+<div class="upper-header">
+  <a href="/"> <div class="logo-img"></div></a>
+  <div class="search-box" style="position: relative">
+    <input type="text" placeholder="Search..." onkeyup="pressed()" />
+    <div class="search"></div>
+    <div class="search-popup" id="search-popup">
+      <ul
+        style="
+          list-style-type: none;
+          font-size: 12px;
+          position: absolute;
+          top: 100%;
+          left: 15%;
+          max-height: 70vh;
+          overflow: scroll;
+        "
+      >
+        <% for (let i =0 ; i < langNghes.length ; i ++) { %>
+        <li>
+          <a href="/show/<%= langNghes[i]._id %> "><%= langNghes[i].name %> </a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onkeyup = pressed;
+  var search_input;
+  var search_box;
+  var search_popup;
+  function pressed(e) {
+    search_input = document.querySelector(".search-box input").value;
+    search_box = document.querySelector(".search-box input");
+    search_popup = document.querySelectorAll("#search-popup li");
+    search_input = search_input.trim().toLowerCase();
+    if (search_input.length == 0) {
+      for (let i = 0; i < search_popup.length; i++) {
+        search_popup[i].style.display = "none";
+      }
+    }
+    for (let i = 0; i < search_popup.length; i++) {
+      if (
+        !search_popup[i].innerHTML.toLocaleLowerCase().includes(search_input)
+      ) {
+        search_popup[i].style.display = "none";
+      } else {
+        search_popup[i].style.display = "list-item";
+      }
+    }
+  }
+</script>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOW detail</title>
+    <%- include('./show-style.ejs') %> <%- include('./header-style.ejs') %> <%-
+    include('./footer-style.ejs') %> <%- include('./all.ejs') %>
+  </head>
+
+  <body>
+    <header>
+      <%-include('./header.ejs') %>
+      <h2 class="ten-lang"><%= langNghe.name %></h2>
+    </header>
+
+    <main>
+      <div class="upper-content">
+        <div class="upper-text">
+          <h2 id="ten-lang"><%= langNghe.name %></h2>
+          <p id="introduction"><%= langNghe.introduction %></p>
+        </div>
+        <div class="upper-img">
+          <img class="img-2" src="<%= langNghe.link1 %>" alt="" />
+        </div>
+      </div>
+      <div class="below-content">
+        <p id="history"><%= langNghe.history %></p>
+
+        <img id="img-3" src="<%= langNghe.link2 %>" alt="" />
+
+        <p id="product"><%= langNghe.product %></p>
+        <hr />
+        <h2 id="other">Recommendations</h2>
+      </div>
+      <div class="row suggestion">
+        <div class="col-4 suggest-item">
+          <a href="/show/635ba16f474467bba9fe091f">
+            <img
+              id="img-khac-1"
+              src="../assets/img/LangVongNguyet1.jpg"
+              alt=""
+            />
+            <div class="suggest-item-name">Lang Vong Nguyet</div>
+          </a>
+        </div>
+        <div class="col-4 suggest-item">
+          <a href="/show/635ba16f474467bba9fe0920">
+            <img id="img-khac-2" src="../assets/img/LangTanChau1.jpg" alt="" />
+            <div class="suggest-item-name">Lang Tan Chau</div>
+          </a>
+        </div>
+        <div class="col-4 suggest-item">
+          <a href="/show/635ba16f474467bba9fe091e">
+            <img id="img-khac-3" src="../assets/img/LangPhuKhe1.jpg" alt="" />
+            <div class="suggest-item-name">Lang Phu Khe</div>
+          </a>
+        </div>
+        <div class="col-4 suggest-item">
+          <a href="/show/635ba16f474467bba9fe091d">
+            <img id="img-khac-4" src="../assets/img/LangMaiDong1.jpg" alt="" />
+            <div class="suggest-item-name">Lang Mai Dong</div>
+          </a>
+        </div>
+      </div>
+    </main>
+    <%-include('./footer.ejs') %>
+  </body>
+</html>
